@@ -4,7 +4,7 @@ const instance = axios.create({
 });
 instance.interceptors.request.use(
   async (config) => {
-    config.headers.Authorization = `Bearer live_272b60b7722b9be34c3004a85ed0ad`;
+    config.headers.Authorization = `Bearer ${process.env.TOKEN}`;
 
     return config;
   },
